@@ -1,4 +1,5 @@
 import sys
+# http://www.wolframalpha.com/input/?i=%28sum+i%5Ei%2C+i+from+1+to+1000%29+mod+10%5E10
 
 numDigits = 10**10
 
