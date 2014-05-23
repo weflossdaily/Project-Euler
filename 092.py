@@ -24,8 +24,16 @@ for i in range(1,567):
         total+=1
     else:
         misses.add(i)
+<<<<<<< HEAD
 for i in range(567,10000000):
     if endsAt89(i,targets,misses):
         #print str(i) + ' ends at 89'
         total+=1
 print str(total)
+=======
+for i in range(567,100000):
+    if endsAt89(i,targets,misses):
+        #print str(i) + ' ends at 89'
+        total+=1
+print str(total)
+>>>>>>> FETCH_HEAD
