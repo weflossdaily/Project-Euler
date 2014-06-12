@@ -20,5 +20,5 @@ def countAscending(prefix,numDigits):
 		return len(range(int(prefix[len(prefix) - 1]),10))
 	return count
 
-digits = 2
-print countDescending('9',digits) + countAscending('0',digits)
+digits = 100
+print 2*countDescending('9',digits) -10 -1
