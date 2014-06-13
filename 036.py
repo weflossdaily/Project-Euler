@@ -3,8 +3,9 @@ def isPalindromic(numberString):
 	halfway = length/2
 	i = 0
 	while i <= halfway:
-		if numberString[i] != numberString[length - i]:
+		if numberString[i] != numberString[length - i - 1]:
 			return False
+		i+=1
 	return True
 
 def getHighestPowerOf2(number):
@@ -35,6 +36,7 @@ total = 0
 i = 0
 while i < 1000000:
 	i+=1
+	#print str(i) + ': ' + str(isPalindromic(str(i))) + ', ' + convertBase10To2(i) + ': ' + str(isPalindromic(convertBase10To2(i)))
 	if isPalindromic(str(i)) and isPalindromic(convertBase10To2(i)):
 		print str(i) + ', ' + convertBase10To2(i)
 		total += i
