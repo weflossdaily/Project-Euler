@@ -36,4 +36,4 @@ for number in range(1,28124):
 		summand += 1
 	if not canBeWrittenAsSumOfTwoAbundantNumbers:
 		total += number
-print total
+print(total)
