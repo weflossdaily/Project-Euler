@@ -2,7 +2,7 @@ def sumFactors(number):
 	potentialFactor = 1
 	factorSum = 0
 	upperLimit = number/2
-	while potentialFactor < upperLimit:
+	while potentialFactor <= upperLimit:
 		if number % potentialFactor == 0:
 			factorSum += potentialFactor
 		potentialFactor += 1
