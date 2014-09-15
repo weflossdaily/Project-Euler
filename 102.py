@@ -11,9 +11,9 @@ def originInTriangle(triangle):
 		#if it is, then polygon contains origin
 		midpoint = [(rays[0][0]+rays[1][0])/2,(rays[0][1]+rays[1][1])/2]
 		for ray in rays:
-			#check for horizontal ray
+			#check for vertical ray
 			if ray[0]==points[initialPoint][0]:
-				#ray is horizontal
+				#ray is vertical
 				if (0 > points[initialPoint][1]) != (midpoint[1] > points[initialPoint][1]):
 					return False
 			else:
