@@ -1,3 +1,5 @@
+from pandigital import isPandigital
+
 thisMany = 100000000+1
 
 def unprimeIndices(number,primality):
@@ -13,14 +15,6 @@ def findNextPrime(lastPrimeIndex,primality):
     while currentIndex < leng and primality[currentIndex]==0:
         currentIndex+=1
     return currentIndex
-
-def isPandigital(number):
-    numString = sorted(str(number))
-    # print(numString)
-    for i in range(len(numString)):
-        if numString[i] != str(i+1):
-            return False
-    return True
 
 print('starting primes')
 primalities=[1]*thisMany

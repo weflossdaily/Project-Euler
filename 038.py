@@ -39,37 +39,7 @@ products gets us a pandigital result. I like this problem because my gut keeps
 changing its feeling about where, between 9 and 9876, the number lies.
 '''
 
-def isPartiallyPandigital(number):
-    """Given an integer, return True if the integer is partially pandigital.
-
-    A partially pandigital number is a number which, when catted with some other
-    chars, *could* form a pandigital number. For example 9582 is partially
-    pandigital since, when catted with 13467, it forms a pandigital number. 33,
-    however, is not, since it repeats a digit.
-
-    This function is slow. (RP, 2014-09-21)"""
-
-    numString = sorted(str(number))
-    if numString[0] == 0:
-        return False
-    for i in range(len(numString)-1):
-        if numString[i]==numString[i+1]:
-            return False
-    return True
-
-
-def isPandigital(number):
-    if len(number) != 9:
-        return False
-    numString = sorted(number)
-    # print(number,'sss')
-    if number[0] == 0:
-        return False
-    # print(numString)
-    for i in range(len(numString)):
-        if numString[i] != str(i+1):
-            return False
-    return True
+from pandigital import isPandigital, isPartiallyPandigital
 
 def checkCatProd(number):
     """Given a number as a string, check that its cat-prod is pandigital.

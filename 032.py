@@ -1,3 +1,8 @@
+"""Notes:
+
+"""
+
+
 def checkProducts(numString):
 	blank = ''
 	for i in range(1,len(numString) - 2):
