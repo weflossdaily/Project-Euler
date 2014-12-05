@@ -2,28 +2,21 @@
 
 def digitSum(n):
 	r = 0
-	if n > 9:
-		while n:
-			r, n = r + n % 10, n / 10
-		return r
-	else:
-		return -1 # out of base/exponent range
+	while n:
+		r, n = r + n % 10, n / 10
+	return r
 
-bases = [[i] for i in range(2,100)] # the upper bound of this range is "cheating"
-maxes = [bases[i][0] for i in range(0,len(bases))]
-exponents = [1 for i in range(0,len(bases))]
+maxPowers = [i for i in range(2,100)] # the upper bound of this range is "cheating." The lower the value, the faster this performs, but I have put no thought into why we only need this many.
+exponents = [1 for i in range(0,len(maxPowers))]
 sequence = []
 
+# we also stop prematurely; sequence should be an ordered set and we should continue until every element of maxPowers is greater than the 30th smallest element in sequence
 while len(sequence) < 30:
-	# print(maxes)
-	baseIndex = maxes.index(min(maxes))
-	# print(baseIndex)
+	baseIndex = maxPowers.index(min(maxPowers))
 	base = baseIndex + 2
 	exponent = exponents[baseIndex] + 1
-	# print(exponent)
 	power = (base)**exponent
-	bases[baseIndex].append(power)
-	maxes[baseIndex] = power
+	maxPowers[baseIndex] = power
 	exponents[baseIndex] = exponent
 	if digitSum(power) == base:
 		print(base,exponent,power)
