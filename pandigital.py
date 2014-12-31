@@ -38,7 +38,7 @@ def isPandigital(number):
     This function is slow. (RP, 2014-09-21)"""
 
     numString = str(number)
-    if len(numString) != 9:
+    if len(numString) > 9:
         return False
     numString = sorted(numString)
     # print(number,'sss')
