@@ -13,4 +13,5 @@ def getLastTenOfProduct(i):
 sum=0
 for i in range(1,1001):
 	sum += getLastTenOfProduct(i)
+	sum = sum % numDigits
 print sum % numDigits
