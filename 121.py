@@ -18,7 +18,7 @@ def powerset(iterable):
 games = powerset(range(1,numberOfPulls + 1))
 for redPulls in games:
 	if len(redPulls) > maxRedPulls:
-		continue
+		break
 	product = 1
 	for pull in redPulls:
 		product *= pull
