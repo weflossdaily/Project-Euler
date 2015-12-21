@@ -1,10 +1,11 @@
 from math import factorial
 from math import floor
+from math import ceil
 from itertools import chain
 from itertools import combinations
 
 numberOfPulls = 15
-maxRedPulls = round((numberOfPulls / 2) - 1)
+maxRedPulls = ceil((numberOfPulls / 2) - 1)
 waysToWinSoFar = 0
 waysToPlay = factorial(numberOfPulls + 1)
 
